@@ -130,7 +130,8 @@ defmodule AzureStorage.Blob do
     query = "#{container}?restype=container"
 
     headers = %{
-      "x-ms-blob-public-access" => "blob",
+      # remove to make the container private access
+      # "x-ms-blob-public-access" => "blob",
       "x-ms-default-encryption-scope" => "$account-encryption-key",
       "x-ms-deny-encryption-scope-override" => false,
       :"Content-Type" => "application/octet-stream"
